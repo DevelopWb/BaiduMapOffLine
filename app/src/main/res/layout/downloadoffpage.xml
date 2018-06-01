@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/download_top_rl"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:background="#ffffff" >
+
+        <ImageView
+            android:id="@+id/download_back"
+            android:layout_width="55dp"
+            android:layout_marginLeft="15dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/download_back_selecter" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/citylist_top_tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/download_press"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="下载管理"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/citylist_top_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/citylist_normal"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="城市列表"
+                android:textColor="#3366cc"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#e0000000" />
+
+    <LinearLayout
+        android:id="@+id/citylist_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+       >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:background="#e06699ff"
+            android:gravity="center|left"
+            android:paddingLeft="15dp"
+            android:text="全部城市 "
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+ 
+       <ExpandableListView
+            android:id="@+id/cityExpandable_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:cacheColorHint="#ffffff"
+             >
+        </ExpandableListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/description_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:gravity="center|left"
+            android:paddingLeft="15dp"
+            android:text="赞无下载，点击“城市列表”进行下载吧 "
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:gravity="center|left"
+            android:paddingLeft="15dp"
+            android:text="使用离线地图的好处： "
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:gravity="center|left"
+            android:paddingLeft="15dp"
+            android:text="1.节省您90%的流量，不在为流量发愁 "
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:gravity="center|left"
+            android:paddingLeft="15dp"
+            android:text="2.网络不佳也能顺畅用地图 "
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/localmap_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        >
+
+        <TextView
+            android:id="@+id/download_city_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:background="#e06699ff"
+            android:gravity="center|left"
+            android:paddingLeft="15dp"
+            android:text="已下载城市 "
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <ListView
+            android:id="@+id/localmaplist"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottom_ll"
+            android:layout_below="@+id/download_city_tv"
+            android:background="#ffffff"
+            android:cacheColorHint="#ffffff"
+            />
+
+        <LinearLayout
+            android:id="@+id/bottom_ll"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/delete_all_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/delete_all_bg"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginRight="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/delete_all" />
+
+                <TextView
+                    android:id="@+id/delet_all_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="全部删除 "
+                    android:textColor="#ffffff"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="20dp"
+                android:background="#ffffff" />
+
+            <LinearLayout
+                android:id="@+id/download_all_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="#e06699ff"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/download_all_iv"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginRight="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/download_grey" />
+
+                <TextView
+                    android:id="@+id/download_all_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="全部下载"
+                    android:textColor="#A5C3FF"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="20dp"
+                android:background="#ffffff" />
+
+            <LinearLayout
+                android:id="@+id/pause_all_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/pause_all_normal"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/pause_all_iv"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginRight="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pause_grey" />
+
+                <TextView
+                    android:id="@+id/pause_all_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="全部暂停 "
+                    android:textColor="#A5C3FF"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
